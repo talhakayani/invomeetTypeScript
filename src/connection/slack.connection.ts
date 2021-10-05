@@ -1,6 +1,9 @@
 import { App } from '@slack/bolt';
 import { WebClient, ErrorCode } from '@slack/web-api';
 require('dotenv').config('../.env');
+
+console.log(process.env.SLACK_BOT_TOKEN);
+
 const client = new WebClient(process.env.SLACK_BOT_TOKEN);
 
 const app = new App({
