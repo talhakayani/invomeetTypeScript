@@ -8,7 +8,7 @@
     "start": "node dist/app.js",
     "build": "tsc -p tsconfig.json",
     "dev": "ts-node-dev src/app.ts",
-    "postinstall": " mv -i -v src/config dist/",
+    "postinstall": "nvm use 16.7.0",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
