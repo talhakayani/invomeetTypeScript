@@ -7,7 +7,6 @@
   "scripts": {
     "start": "node dist/app.js",
     "build": "tsc -p tsconfig.json",
-    "postinstall": "./node_modules/.bin/slack-verify --secret 20b9c8e87a64950427ce3af371e7da40 [--path=/slack/events] [--port=5432]\\",
     "dev": "ts-node-dev src/app.ts"
   },
   "author": "Talha Kayani",
