@@ -1,0 +1,29 @@
+{
+  "development": {
+    "username": "postgres",
+    "password": "admin",
+    "database": "invomeetrooms",
+    "host": "127.0.0.1",
+    "dialect": "postgres"
+  },
+  "test": {
+    "username": "root",
+    "password": null,
+    "database": "database_test",
+    "host": "127.0.0.1",
+    "dialect": "mysql"
+  },
+  "production": {
+    "username": "ussxbdrieeyevg",
+    "password": "f800b636ec53fb295117df48ac5a541441d76ed42a0be1835f5a183f8e027cf3",
+    "database": "df7gledefum1v1",
+    "host": "ec2-44-199-26-122.compute-1.amazonaws.com",
+    "dialect": "postgres",
+    "dialectOptions": {
+      "ssl": {
+        "require": true,
+        "rejectUnauthorized": false
+      }
+    }
+  }
+}
