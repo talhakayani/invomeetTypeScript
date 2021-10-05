@@ -11,6 +11,6 @@ app.use(express.json());
 
 app.use('/', router);
 app.listen(PORT, async () => {
-  await db.sequelize.sync();
+  await db.sequelize.authenticate();
   console.log(`Server is up on ${PORT} http://localhost:${PORT}`);
 });
