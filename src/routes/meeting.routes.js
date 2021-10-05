@@ -1,0 +1,15 @@
+"use strict";
+exports.__esModule = true;
+exports.meeting = void 0;
+var controller = require("../controller/meeting.controller");
+var meeting = require('express').Router();
+exports.meeting = meeting;
+meeting.get('/', controller.getMeetings);
+meeting.post('/add', controller.addMeeting);
+meeting.put('/update/:id', controller.updateMeetingById);
+meeting.get('/inProgress', controller.inProgressMeetings);
+meeting.get('/history/:reservedBy', controller.getMeetingsHistory);
+meeting.get('/inProgress/:reservedBy', controller.inProgressMeetingsByUser);
+meeting.get('/info/:googleCalendarEventId', controller.getInformationByEventId);
+meeting["delete"]('/history/remove/:reservedBy', controller.removeHistory);
+meeting.get('/history/:reservedBy/:reservedFrom', controller.getMeetingsHistoryByDate);

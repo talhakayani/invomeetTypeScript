@@ -1,0 +1,12 @@
+"use strict";
+exports.__esModule = true;
+exports.calendar = void 0;
+var controller = require("../controller/google-calendar.controller");
+var express_1 = require("express");
+var calendar = (0, express_1.Router)();
+exports.calendar = calendar;
+calendar.post('/token/add', controller.addToken);
+calendar.get('/token/:user_id', controller.getToken);
+calendar.get('/token', controller.getAllTokens);
+calendar.put('/add/:user_id', controller.addCalendar);
+calendar.get('/find/:user_id', controller.getCalendarId);

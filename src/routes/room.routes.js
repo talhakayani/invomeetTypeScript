@@ -1,0 +1,16 @@
+"use strict";
+exports.__esModule = true;
+exports.room = void 0;
+var controller = require("../controller/room.controller");
+var express_1 = require("express");
+var room = (0, express_1.Router)();
+exports.room = room;
+room.get('/', controller.getAllRooms);
+room.get('/ids/:name', controller.getRoomId);
+room.post('/add', controller.addRoom);
+room["delete"]('/remove/:name', controller.removeRoom);
+room.get('/meetings', controller.getAllRoomsAndMeetings);
+room.get('/meetings/:name', controller.getMeetingsByRoom);
+room.get('/meetings/user/:reservedBy', controller.getMeetingsByUser);
+room.get('/meetings/inProgress/user/:reservedBy', controller.getInProgressMeetingsByUser);
+room.get('/find/:name', controller.getRoomInfo);
